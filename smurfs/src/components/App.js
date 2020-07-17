@@ -1,9 +1,19 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
+
+import { SmurfContext } from './context/SmurfContext'
+import { SmurfCard } from './SmurfCard'
+import { SmurfForm } from './SmurfForm'
+
+
 
 export const App = () => {
   return (
-    <div>
-      
-    </div>
+    
+      <SmurfContext.Provider value={{}}>
+      <SmurfCard/>
+      <SmurfForm/>
+    </SmurfContext.Provider>
+    
   )
 }
